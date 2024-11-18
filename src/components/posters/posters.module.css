@@ -1,0 +1,31 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-column-gap: 2vw;
+  grid-row-gap: 3.5vw;
+  padding: 60px 15px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.div {
+  position: relative;
+  max-height: 100dvh;
+}
+
+.div > img {
+  max-width: 330px;
+  max-height: 330px;
+  width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .div > img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
